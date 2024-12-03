@@ -4,4 +4,8 @@
     $nome = "Matheus";
     $sobre_nome = "Seleghin";
     $solteiro = true;
+    $numero1 = 10;
+    $numero2 = 10;
+    $soma = $numero1 + $numero2
+    $divisao = $numero1/$numero2
 ?>
