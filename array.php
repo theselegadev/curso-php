@@ -41,4 +41,14 @@
     print_r($carros);
     echo "</pre>";
 
+    $carros = array("s10","uno-mile","ferrari","bugati");
+
+    array_pop($carros);
+
+    echo"<pre>";
+    print_r($carros);
+    echo"</pre>";
+    
+
+
 ?>
