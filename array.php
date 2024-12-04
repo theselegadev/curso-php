@@ -16,6 +16,7 @@
 
     echo"<br>";
 
+    // array()
     $carros = array();
 
     echo "<pre>";
@@ -32,6 +33,7 @@
 
     echo "</ul>";
 
+    // array_push()
     $carros = array();
 
     array_push($carros,"Amarok");
@@ -41,6 +43,7 @@
     print_r($carros);
     echo "</pre>";
 
+    // array_pop()
     $carros = array("s10","uno-mile","ferrari","bugati");
 
     array_pop($carros);
@@ -48,7 +51,13 @@
     echo"<pre>";
     print_r($carros);
     echo"</pre>";
-    
+
+    // chave e valor
+    $pessoa = array("nome:" => "Matheus", "altura" => 1.65, "solterio" => true);
+
+    echo"<pre>";
+    print_r($pessoa);
+    echo"</pre>";
 
 
 ?>
