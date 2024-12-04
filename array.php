@@ -32,4 +32,13 @@
 
     echo "</ul>";
 
+    $carros = array();
+
+    array_push($carros,"Amarok");
+    array_push($carros,"Jeep");
+
+    echo "<pre>";
+    print_r($carros);
+    echo "</pre>";
+
 ?>
