@@ -59,5 +59,19 @@
     print_r($pessoa);
     echo"</pre>";
 
+    // matriz
+
+    $pessoa2 = array("nome"=>"Maria","altura"=>1.60,"solteiro"=>true);
+    $pessoa3 = array("nome"=>"joão","altura"=>1.58,"solteiro"=>true);
+
+    $lista_pessoas = array();
+
+    array_push($lista_pessoas,$pessoa);
+    array_push($lista_pessoas,$pessoa2);
+    array_push($lista_pessoas,$pessoa3);
+
+    echo"<pre>";
+    print_r($lista_pessoas);
+    echo"</pre>";
 
 ?>
