@@ -12,17 +12,16 @@
 
     function imprimir_texto($texto){
         echo $texto;
+        quebrar_linha();
     }
 
     imprimir_texto("Hello world");
 
-    quebrar_linha();
-
     function soma($n1,$n2){
-        echo $n1 + $n2;
+        return $n1 + $n2;
     }
 
-    soma(10,10);
+    $adicao = soma(10,10);
 
-    quebrar_linha();
+    imprimir_texto($adicao)
 ?>
