@@ -15,7 +15,7 @@
                 $usuario = "root";
                 $senha = "";
                 $db_name = "aula";
-
+                global $conn;
                 $conn = mysqli_connect($servidor,$usuario,$senha) or die ("Não foi possível conectar");
                 mysqli_select_db($conn,$db_name);
                 
@@ -38,5 +38,27 @@
         <input type="password" name="senha">
         <input type="submit" value="Enviar">
     </form>
+        <?php
+            $query_consulta = "Select id,nome,senha from usuarios";
+            $dados = mysqli_query($conn,$query_consulta);
+            if($dados){
+                while($linha = mysqli_fetch_assoc($dados)){
+                    ?>
+                        <table>
+                            <thead>
+                                <th>id</th>
+                                <th>nome</th>
+                                <th>senha</th>
+                            </thead>
+                            <tbody>
+                                <td><?php echo $linha["id"]?></td>
+                                <td><?php echo $linha["nome"]?></td>
+                                <td><?php echo $linha["senha"]?></td>
+                            </tbody>
+                        </table>
+                    <?php
+                }
+            }
+            ?>
 </body>
 </html>
