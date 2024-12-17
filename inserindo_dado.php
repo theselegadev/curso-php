@@ -52,6 +52,7 @@
                             <td><?php echo $linha["nome"]?></td>
                             <td><?php echo $linha["senha"]?></td>
                             <td><a href="./excluir.php?id=<?php echo $linha["id"]?>"><button>excluir</button></a></td>
+                            <td><a href="./editar.php?id=<?php echo $linha["id"]?>"><button>editar</button></a></td>
                         </tbody>
                 </table>
                     <?php
