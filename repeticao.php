@@ -25,4 +25,14 @@
     for($i=0;$i<10;$i++){
         echo "O valor de controle é: ".$i."<br>";
     }
+
+    // foreach
+    $carros = array("Amarok","Civic","Celta","Mustang","Fusca");
+
+    echo"<h1>Foreach</h1><br>";
+
+    foreach($carros as $item){
+        echo $item;
+        echo "<br>";
+    }
 ?>
