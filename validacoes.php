@@ -1,11 +1,16 @@
 <?php 
     // Validações
-    // funções filter_input() filter_var
+    // funções filter_input() filter_var()
     // FILTER_VALIDATE_INT
-    // FILTER_VALIDATE _EMAIL
+    // FILTER_VALIDATE_EMAIL
     // FILTER_VALIDATE_FLOAT
     // FILTER_VALIDATE_IP
     // FILTER_VALIDATE_URL
+    // Sanitizações
+    // FILTER_SANITIZE_SPECIAL_CHARS
+    // FILTER_SANITIZE_NUMBER_INT
+    // FILTER_SANITIZE_EMAIL
+    // FILTER_SANITIZE_URL
 
     $erros = array();
 
@@ -28,6 +33,29 @@
         }
     }
 
+    // Sanitização
+
+    if(isset($_POST) && !empty($_POST)){
+        $nome = filter_input(INPUT_POST,'nome',FILTER_SANITIZE_SPECIAL_CHARS);
+        echo $nome."<br>";
+
+        $idade = filter_input(INPUT_POST,'idade',FILTER_SANITIZE_NUMBER_INT);
+        echo $idade."<br>";
+
+        // validação de variável com filter_var()
+        // É aconselhado fazer a sanitização e a validação juntos
+        
+        if(!filter_var($idade,FILTER_VALIDATE_INT)){
+            echo "idade inválida";
+        }
+
+        $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_EMAIL);
+        echo $email."<br>";
+
+        $url = filter_input(INPUT_POST,'url',FILTER_SANITIZE_URL);
+        echo $url."<br>";
+    }
+
     if(!empty($erros)){
         foreach($erros as $erro){
             echo $erro."<br>";
@@ -43,6 +71,8 @@
 </head>
 <body>
     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome"><br>
         <label for="idade">Idade:</label><br>
         <input type="number" name="idade" id="idade"><br>
         <label for="email">Email:</label><br>
