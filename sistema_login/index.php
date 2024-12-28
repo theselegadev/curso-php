@@ -57,5 +57,7 @@
         <input type="submit" value="enviar"><br>
         <input type="reset" value="limpar"><br>
     </form>
+    <p>Login: admin</p>
+    <p>Senha: 123</p>
 </body>
 </html>

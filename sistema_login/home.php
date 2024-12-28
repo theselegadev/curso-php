@@ -2,6 +2,10 @@
     include "./conexao.php";
     session_start();
 
+    if(empty($_SESSION['logado'])){
+        header("Location: ./index.php");
+    }
+
     $id = $_SESSION['id_usuario'];
 
     $query = "select * from usuarios where id = '$id'";
@@ -20,6 +24,6 @@
     <title>Home page</title>
 </head>
 <body>
-    
+    <a href="logout.php">Sair</a>
 </body>
 </html>
