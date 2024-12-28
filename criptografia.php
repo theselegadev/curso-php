@@ -15,4 +15,9 @@
     // sha1
     echo "<h2>Sha1</h2><br>";
     echo "sha1: ".sha1($senha)."<br>Senha: ".$senha."<br>";
+    echo "<hr>";
+    echo "<h2>Hash:</h2>";
+
+    $senhasegura = password_hash($senha,PASSWORD_DEFAULT);
+    echo "hash: ".$senhasegura."<br>Senha: ".$senha."<br>";
 ?>
