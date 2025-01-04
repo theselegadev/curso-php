@@ -7,8 +7,9 @@
         if(empty($_POST['login']) or empty($_POST['senha'])){
             array_push($erros,"<li>Preencha todos os campos</li>");
         }else{
-            $login = $_POST['login'];
-            $senha = $_POST['senha'];
+            //função mysqli_escape_string() para fugir de entradas maliciosas como sql injection
+            $login = mysqli_escape_string($conexao,$_POST['login']);
+            $senha = mysqli_escape_string($conexao,$_POST['senha']);
 
             $query = "select * from usuarios where login = '$login'";
             $resultado = mysqli_query($conexao,$query);
