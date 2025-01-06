@@ -1,22 +1,30 @@
-<?php 
-    include "./conexao.php";
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD PHP PROCEDURAL</title>
+    <title>CRUD</title>
 </head>
 <body>
-    <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
-        <label for="nome">nome:</label><br>
-        <input type="text" name="nome" id="nome"><br>
-        <label for="sobrenome">Sobre Nome:</label><br>
-        <input type="text" name="sobrenome" id="sobrenome"><br>
-        <label for="email">Email:</label><br>
-        <input type="email" name="email" id="email"><br>
-        <input type="submit" value="Enviar"><br>
-    </form>
+    <h2>Clientes</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobre nome</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matheus</td>
+                <td>Seleghin</td>
+                <td>Matheus@.com.br</td>
+                <td><a href="#">Editar</a></td>
+                <td><a href="#">Remover</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="#">Adicionar cliente</a>
 </body>
 </html>
