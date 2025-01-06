@@ -25,6 +25,6 @@
             </tr>
         </tbody>
     </table>
-    <a href="#">Adicionar cliente</a>
+    <a href="./adicionar.php">Adicionar cliente</a>
 </body>
 </html>
