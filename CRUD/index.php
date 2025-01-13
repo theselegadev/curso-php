@@ -31,7 +31,7 @@
                     <td><?php echo $dados['nome'];?></td>
                     <td><?php echo $dados['sobrenome'];?></td>
                     <td><?php echo $dados['email']?></td>
-                    <td><a href="#">Editar</a></td>
+                    <td><a href="./update.php?id=<?php echo $dados['id'];?>">Editar</a></td>
                     <td><a href="#">Remover</a></td>
                 </tr>
                 <?php }?>
