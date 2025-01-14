@@ -1,10 +1,21 @@
 <?php
     include_once "./conexao.php";
 
+    function clear($input){
+        global $conexao;
+        // sql injection
+        $var = mysqli_escape_string($conexao,$input);
+
+        // cross site scripting
+        $var = htmlspecialchars($var);
+
+        return $var;
+    }
+
     if(isset($_POST) && !empty($_POST)){
-        $nome = mysqli_escape_string($conexao,$_POST['nome']);
-        $sobrenome = mysqli_escape_string($conexao,$_POST['sobrenome']);
-        $email = mysqli_escape_string($conexao,$_POST['email']);
+        $nome = clear($_POST['nome']);
+        $sobrenome = clear($_POST['sobrenome']);
+        $email = clear($_POST['email']);
 
         $query = "insert into clientes (nome,sobrenome,email) values('$nome','$sobrenome','$email')";
 
