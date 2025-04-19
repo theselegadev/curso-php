@@ -15,4 +15,7 @@
             echo parent::nome;
         }
     }
+
+    $matheus = new Matheus();
+    $matheus->exibirNome();
 ?>
