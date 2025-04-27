@@ -1,4 +1,7 @@
 <?php
+    require "classes/produto.php";
+    require "models/produto.php";
+
     class Pessoa {
         public $nome;
         public $idade;
@@ -14,4 +17,13 @@
     $matheus->Falar();
 
     var_dump($matheus);
+
+    use classes\Produto as productClasses;
+    use models\Produto as productModels;
+
+    $produtoClasses = new productClasses();
+    $produtoClasses->mostrarDetalhes();
+    
+    $produtoModels = new productModels();
+    $produtoModels->mostrarDetalhes();
 ?>
