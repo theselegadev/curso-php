@@ -1,0 +1,18 @@
+{
+    "name": "selegadev/composer",
+    "description": "Teste composer",
+    "require": {
+        "pagseguro/pagseguro-php-sdk": "^4.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Selegadev\\Composer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "theselegadev",
+            "email": "matheus.seleghin7@gmail.com"
+        }
+    ]
+}
