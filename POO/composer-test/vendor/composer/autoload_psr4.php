@@ -6,6 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Selegadev\\Composer\\' => array($baseDir . '/src'),
-    'PagSeguro\\' => array($vendorDir . '/pagseguro/pagseguro-php-sdk/source'),
+    'Cocur\\Slugify\\' => array($vendorDir . '/cocur/slugify/src'),
 );

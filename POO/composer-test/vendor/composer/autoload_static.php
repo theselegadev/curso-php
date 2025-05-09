@@ -4,27 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc8a56ed6adf8a577673243a42315e21f
+class ComposerStaticInitce939a71c73fc66649a3289315594abc
 {
     public static $prefixLengthsPsr4 = array (
-        'S' => 
+        'C' => 
         array (
-            'Selegadev\\Composer\\' => 19,
-        ),
-        'P' => 
-        array (
-            'PagSeguro\\' => 10,
+            'Cocur\\Slugify\\' => 14,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Selegadev\\Composer\\' => 
+        'Cocur\\Slugify\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
-        'PagSeguro\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pagseguro/pagseguro-php-sdk/source',
+            0 => __DIR__ . '/..' . '/cocur/slugify/src',
         ),
     );
 
@@ -35,9 +27,9 @@ class ComposerStaticInitc8a56ed6adf8a577673243a42315e21f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc8a56ed6adf8a577673243a42315e21f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc8a56ed6adf8a577673243a42315e21f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc8a56ed6adf8a577673243a42315e21f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitce939a71c73fc66649a3289315594abc::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitce939a71c73fc66649a3289315594abc::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitce939a71c73fc66649a3289315594abc::$classMap;
 
         }, null, ClassLoader::class);
     }
