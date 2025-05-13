@@ -3,8 +3,15 @@
 
     // SET 
     $produto = new \App\Model\Produto();
-    $produto->setNome("Coca cola");
-    $produto->setDescricao("Lata 350ml");
+    $produto->setId(1);
+    $produto->setNome("copo");
+    $produto->setDescricao("branco");
 
     $produtoDao = new \App\Model\ProdutoDao();
-    $produtoDao->create($produto);
+    //$produtoDao->create($produto);
+
+    $lista = $produtoDao->read();
+
+    var_dump($lista);
+
+    $produtoDao->update($produto);
