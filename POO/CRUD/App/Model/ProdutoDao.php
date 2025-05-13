@@ -1,8 +1,7 @@
 <?php
     namespace App\Model;
 
-use PDO;
-use PDOException;
+    use PDO;
 
     class ProdutoDao{
         public function create(Produto $p){
@@ -39,6 +38,10 @@ use PDOException;
         }
 
         public function delete($id){
+            $sql = "DELETE FROM produtos where id = ?";
+            $res = Conexao::getConn()->prepare($sql);
+            $res->bindValue(1,$id);
 
+            $res->execute();
         }
     }

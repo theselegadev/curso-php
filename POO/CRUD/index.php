@@ -3,7 +3,7 @@
 
     // SET 
     $produto = new \App\Model\Produto();
-    $produto->setId(1);
+    $produto->setId(3);
     $produto->setNome("copo");
     $produto->setDescricao("branco");
 
@@ -15,3 +15,5 @@
     var_dump($lista);
 
     $produtoDao->update($produto);
+
+    $produtoDao->delete($produto->getId());
