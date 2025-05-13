@@ -1,4 +1,6 @@
 <?php
+    namespace App\Model;
+
     class ProdutoDao{
         public function create(Produto $p){
 
@@ -13,6 +15,6 @@
         }
 
         public function delete($id){
-            
+
         }
     }

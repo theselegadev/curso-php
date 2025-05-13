@@ -1,4 +1,6 @@
 <?php
+    namespace App\Model;
+
     class Produto{
         private $id, $nome, $descricao;
 
